@@ -1,0 +1,45 @@
+{% extends "import.html" %} 
+{% block content %}
+
+{% include "navAdmin.html"%}
+<center>
+<br><h1 class="p-3 mb-2 bg-danger text-white">Otkrivanje tumora na mozgu korstenjem ML algoritma</h1><br>
+<h1 class="p-3 mb-2 bg-success text-white" style="margin-bottom: 130px;">Dobrodosao , {{ime}}</h1>
+
+    <form  id="upload-file" method="post" enctype="multipart/form-data">
+         <input   type="file" name="file" class="btn btn-success" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+<div>
+
+
+    <div class="image-section" style="display:none;">
+         <img id="imagePreview"  class="img-responsive" src="#" style="width:300px;height:300px;"/><br><br>
+         <div>
+             <button type="button" class="btn btn-info btn-lg " id="btn-predict">Rezultat!</button>
+         </div>
+    </div>
+   
+</div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+    <form id="insertUser" method="POST" action="{{url_for('index')}}">
+    Ime: <input type="text"name="imee" id="imee" required style="width: 450px;">
+    Sifra: <input type="text"name="sifraa" id="sifraa" required style="width: 450px;">
+    Slika: <input type="text" id="fileNameInput" placeholder="Ime datoteke" readonly style="width: 450px;"name="slika" id="slika" required  >
+    Rezultat: <input type="text" id="rezultat"    style="width: 450px;">
+    Doktor: <input type="text" id="doktorInput" value="{{ime}}" readonly name="doktor" id="doktor" style="width: 450px;">
+
+    <button type="submit" class="btn btn-primary" id="btn-dodaj-korisnika">Dodaj korisnika</button>
+
+</form>
+<h3 id="poruka">
+    <span> </span>
+</h3>
+</center><br><br> 
+<br><h4 style="text-align: right;padding-right: 40px;">Husein Čišić</h4><br>
+{% endblock %}
