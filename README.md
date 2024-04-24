@@ -1,0 +1,1 @@
+Kreiranje sistema za detekciju tumora na mozgu korsiteci kombinaciju FLASK,HTML,jS,CSS tehnologija.Ovaj sistem sadrzi sve neophone stvari za odjel neurologije npr pacijent moze pregledati rezultat svoje pretrage,zakazati pregled i vidjeti kada ima zakazan pregled dok doktor ima mogucnosti upravljanja terminima i mnogobrojne druge funkcije.
